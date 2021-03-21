@@ -1,5 +1,5 @@
 const data = {
-    product:[
+    products:[
         {
             _id: '1',
             name: 'Organic Apples',
