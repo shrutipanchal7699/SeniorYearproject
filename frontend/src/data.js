@@ -5,6 +5,7 @@ const data = {
             name: 'Organic Apples',
             image: '/images/appleImage.jpg',
             price: 1.3,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
 
@@ -13,7 +14,8 @@ const data = {
             name: 'Bananas',
             image: '/images/bananaImage.jpg',
             price: 3,
-            description: 'freshly farmed organic apples',
+            countInStock : 50,
+            description: 'fresh from the farm bananas',
         },
 
         {
@@ -21,7 +23,8 @@ const data = {
             name: 'Blueberries',
             image: '/images/blueberryImage.jpg',
             price: 1,
-            description: 'freshly farmed organic apples',
+            countInStock : 50,
+            description: 'hand picked blueberries staright from the farms',
         },
 
         {
@@ -29,13 +32,15 @@ const data = {
             name: 'Broccolis',
             image: '/images/broccoliImage.jpg',
             price: 1.9,
-            description: 'freshly farmed organic apples',
+            countInStock : 50,
+            description: 'Add some broccoli facts',
         },
         {
             _id: '5',
             name: 'cabbage',
             image: '/images/cabbageImage.jpg',
             price: 1.5,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         {
@@ -43,6 +48,7 @@ const data = {
             name: 'Fresh Orange Carrots',
             image: '/images/carrotImage.jpg',
             price: 2,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         {
@@ -50,6 +56,7 @@ const data = {
             name: 'Cocoa Beans',
             image: '/images/cocoabeanImage.jpg',
             price: 16,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         {
@@ -57,6 +64,7 @@ const data = {
             name: 'Sweet Corn Bushels',
             image: '/images/cornImage.jpg',
             price: 3.5,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         {
@@ -64,6 +72,7 @@ const data = {
             name: 'lettuce',
             image: '/images/lettuceImage.jpg',
             price: 1,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         {
@@ -71,6 +80,7 @@ const data = {
             name: 'Organic Oranges',
             image: '/images/orangeImage.jpg',
             price: 1.3,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         {
@@ -78,6 +88,7 @@ const data = {
             name: 'White Potatoes',
             image: '/images/potatoImage.jpg',
             price: 0.7,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         {
@@ -85,6 +96,7 @@ const data = {
             name: 'Rasberries',
             image: '/images/rasberriesImage.jpg',
             price: 8,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         {
@@ -92,6 +104,7 @@ const data = {
             name: 'Red Onions',
             image: '/images/redOnionImage.jpg',
             price: 1.4,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         {
@@ -99,6 +112,7 @@ const data = {
             name: 'Farmed Spring Onions',
             image: '/images/springOnionImage.jpg',
             price: 2,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         {
@@ -106,6 +120,7 @@ const data = {
             name: 'Strawberries',
             image: '/images/strawberryImage.jpg',
             price: 3.5,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         {
@@ -113,6 +128,7 @@ const data = {
             name: 'Herbal Tea Leaves',
             image: '/images/tealeavesImage.jpg',
             price: 25,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         {
@@ -120,6 +136,7 @@ const data = {
             name: 'Organic Roma Tomatoes',
             image: '/images/tomatoImage.jpg',
             price: 2,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         {
@@ -127,6 +144,7 @@ const data = {
             name: 'Watermelon',
             image: '/images/watermelonImage.jpg',
             price: 0.5,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         {
@@ -134,6 +152,7 @@ const data = {
             name: 'White Onions',
             image: '/images/whiteOnionImage.jpg',
             price: 1.5,
+            countInStock : 50,
             description: 'freshly farmed organic apples',
         },
 
@@ -142,6 +161,7 @@ const data = {
             name: 'Coffee Beans',
             image: '/images/coffeebeanImage.jpg',
             price: 3,
+            // countInStock : 50,
             description: 'freshly farmed organic apples',
         },
         
