@@ -3,42 +3,20 @@ import axios from 'axios';
 import Product from '../components/Product';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import { useDispatch, useSelector } from 'react-redux';
+import { listProducts } from '../actions/productActions';
 
 
 export default function HomeScreen() {
-    // defining the hooks
-    const [products, setProducts] = useState([]);
+    // // defining the hooks
+    const dispatch = useDispatch();
+    const productList  = useSelector(state => state.productList);
+    const {loading, error, products} = productList;
 
-    //default setting is false, as it doesn't load anything
-    const [loading, setLoading] = useState(false);
-
-    const [error, setError] = useState(false);
-    
     // runs only one time, sending an ajax request
     useEffect(() => {
-        const fetchData = async () =>{
-
-            try{
-                setLoading(true);
-            
-                //fetching data from axios 
-                // array will be transformed from the data in backedn to the data in frontend
-                const { data } = await axios.get('/api/products');
-                setLoading(false);
-    
-                //setting the products to the data we are getting from backend.
-                setProducts(data);
-            }catch(err){
-                setError(err.message);
-                setLoading(false);
-            }
-            
-            
-        };
-
-        //calling the already defined fetchdata here.
-        fetchData();
-    }, [])
+        dispatch(listProducts());
+    }, []);
     return(
         <div>
             { loading ? (
