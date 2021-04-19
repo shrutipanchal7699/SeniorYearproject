@@ -1,5 +1,13 @@
 const data = {
     products:[
+        {
+            _id: '1',
+            name: 'Organic Apples',
+            image: '/images/appleImage.jpg',
+            price: 1.3,
+            countInStock : 50,
+            description: 'freshly farmed organic apples',
+        },
 
         {
             _id: '2',
