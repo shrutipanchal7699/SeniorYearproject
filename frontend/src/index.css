@@ -74,6 +74,8 @@ li {
   margin-top : 1rem;
 }
 
+/* did not add select and textarea -- similar to button:hover */
+input, 
 button {
   padding: 1rem;
   border-radius: 0.5rem;
@@ -86,6 +88,14 @@ button {
   cursor: pointer;
 
 }
+button {
+  /* background-color: #f8f8f8; */
+  cursor: pointer;
+}
+
+input:hover, 
+select:hover, 
+textarea:hover,
 button:hover {
   border: 0.1rem #404040 solid;
 }
