@@ -8,6 +8,7 @@ app.get("/api/products", (req,res)=> {
     res.send(data.products);
 });
 
+//added a new api for product details using its id.
 app.get('/api/products/:id', (req, res) =>{
     const product = data.products.find((x) => x._id === req.params.id);
     if(!product) {
