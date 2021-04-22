@@ -18,7 +18,9 @@
   "homepage": "https://github.com/shrutipanchal7699/SeniorYearproject#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "express": "^4.17.1"
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.14",
