@@ -48,6 +48,8 @@ footer {
   color: #ffffff;
 
 }
+
+
 /* Common */
 h1 {
   font-size: 1.8rem;
@@ -112,12 +114,23 @@ button.block {
 /* Headeer */
 header a {
   color: #ffffff;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 a.brand {
   color: white;
   font-size: 3rem;
   font-weight: bold;
+}
+
+/* highlighting the number of objects in the cart, that are added. */
+.badge{
+  background-color:yellow;
+  color:teal;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
+
 }
 
 .row {
@@ -142,7 +155,12 @@ a.brand {
 
 .col-2 {
   flex: 2 1 50rem;
+  width: 50%;
   
+}
+
+.min-30{
+  min-width: 30rem;
 }
 
 /* Image */
@@ -151,6 +169,13 @@ img {
   /* width: 150%; 
   height: 100%; */
   
+}
+
+
+img.small{
+  max-width: 20rem;
+  width: 450%;
+
 }
 
 img.medium {
@@ -222,3 +247,12 @@ img.large {
   color: #a02020;
   background-color: #ffe0e0e0;
 }
+
+p{
+  text-align: center;
+}
+
+.MessageBox{
+  background-color:white;
+}
+
