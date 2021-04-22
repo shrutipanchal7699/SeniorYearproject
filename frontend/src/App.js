@@ -30,7 +30,10 @@ function App() {
                 <Route path="/" component={HomeScreen} exact></Route>
                 <Route path="/cart/:id?" component={CartScreen}></Route>
             </main>
-            <footer className="row center">All rights are reserved.</footer>
+            {/* <div className="footer">
+              All rights are reserved.
+            </div> */}
+            {/* <footer className="row center">All rights are reserved.</footer> */}
     </div>
     </BrowserRouter>        
   );

@@ -1,4 +1,4 @@
-import { CART_ADD_ITEM } from "../constants/cartConstants";
+import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants";
 
 // also replaced the if and else .
 
@@ -26,6 +26,10 @@ export const cartReducer = (state = {itemsInCart:[]}, action) =>{
                     ...state,
                     itemsInCart: state.itemsInCart.map( x => x.product ===itemAlreadyInCart.product ? itemToBeAdded : x),
                 };
+            };
+
+        case CART_REMOVE_ITEM:
+            return { ...state, itemsInCart: state.itemsInCart.filter( (x) => x.product !== action.payload),
             };
         default:
             return state;
