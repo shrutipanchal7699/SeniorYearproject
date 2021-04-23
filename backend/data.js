@@ -4,7 +4,7 @@ const data = {
         {
             name: 'Ishant',
             email: 'ishant.sharma@sjsu.edu',
-            password: bcrypt.hashAsync('1234', 8),
+            password: bcrypt.hashSync('1234', 8),
             isAdmin : true,
             isProducer : false,
             isConsumer : false
@@ -12,7 +12,7 @@ const data = {
         {
             name: 'John',
             email: 'john.padilla@sjsu.edu',
-            password: bcrypt.hashAsync('1234', 8),
+            password: bcrypt.hashSync('1234', 8),
             isAdmin : false,
             isProducer : true,
             isConsumer : false
