@@ -3,6 +3,12 @@ import data from './data.js';
 
 
 const app = express();
+mongoose.connect('mongodb+srv://<username>:<password>@cluster0.bd5dq.mongodb.net/userDB?retryWrites=true&w=majority'
+,{
+    useNewUrlParser: true, 
+    useUnifiedTopology: true, 
+    useCreateIndex: true
+});
 
 app.get("/api/products", (req,res)=> {
     res.send(data.products);
