@@ -18,11 +18,11 @@ const productSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-   // all_owner: [
-        //id: {
-        //    type: mongoose.Schema.Types.ObjectId,
-        //    ref: "User"
-        //},
+   //all_owner: [
+   //     id: {
+   //         type: mongoose.Schema.Types.ObjectId,
+   //         ref: "User"
+   //     },
    // ],
     owner: {
         id: {
@@ -38,6 +38,11 @@ const productSchema = mongoose.Schema({
     price: {
         type:Number,
         required: true,
+    },
+    location: {
+        type: String,
+        required: true,
+        default: null
     }
 });
 

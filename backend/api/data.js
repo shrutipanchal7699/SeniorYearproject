@@ -1,40 +1,19 @@
-<<<<<<< Updated upstream:backend/data.js
-import bcrypt from 'bcryptjs';
-=======
 const bcrypt = require('bcrypt');
 
->>>>>>> Stashed changes:backend/api/data.js
 const data = {
     users: [
         {
             name: 'Ishant',
             email: 'ishant.sharma@sjsu.edu',
-<<<<<<< Updated upstream:backend/data.js
-            password: bcrypt.hashSync('1234', 8),
-            isAdmin : true,
-            isProducer : false,
-            isConsumer : false
-=======
             password: bcrypt.hashSync('1234', 10),
             isAdmin: true,
             location: "San Jose",
             certification: "certified",
             description: "wholesale distributor"
->>>>>>> Stashed changes:backend/api/data.js
         },
         {
             name: 'John',
             email: 'john.padilla@sjsu.edu',
-<<<<<<< Updated upstream:backend/data.js
-            password: bcrypt.hashSync('1234', 8),
-            isAdmin : false,
-            isProducer : true,
-            isConsumer : false
-        },
-
-    ],
-
-=======
             password: bcrypt.hashSync('1234', 10),
             location: "San Diego",
             certification: "certified",
@@ -42,7 +21,6 @@ const data = {
         },
 
     ],
->>>>>>> Stashed changes:backend/api/data.js
     products:[
         {
             _id: '1',
