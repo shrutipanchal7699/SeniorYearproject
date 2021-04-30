@@ -1,25 +1,26 @@
-import bcrypt from 'bcryptjs';
+const bcrypt = require('bcrypt');
+
 const data = {
     users: [
         {
             name: 'Ishant',
             email: 'ishant.sharma@sjsu.edu',
-            password: bcrypt.hashSync('1234', 8),
-            isAdmin : true,
-            isProducer : false,
-            isConsumer : false
+            password: bcrypt.hashSync('1234', 10),
+            isAdmin: true,
+            location: "San Jose",
+            certification: "certified",
+            description: "wholesale distributor"
         },
         {
             name: 'John',
             email: 'john.padilla@sjsu.edu',
-            password: bcrypt.hashSync('1234', 8),
-            isAdmin : false,
-            isProducer : true,
-            isConsumer : false
+            password: bcrypt.hashSync('1234', 10),
+            location: "San Diego",
+            certification: "certified",
+            description: "distributor"
         },
 
     ],
-
     products:[
         {
             _id: '1',
@@ -188,4 +189,4 @@ const data = {
         
     ],
 };
-export default data;
+module.exports = data;
