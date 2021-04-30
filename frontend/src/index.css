@@ -46,7 +46,23 @@ footer {
   grid-area: footer;
   background-color: #203040;
   color: #ffffff;
+  
+}
 
+
+.footer {
+  /* height: 155px; */
+  position: fixed;
+  left: 0;
+  /* bottom: 0; */
+  /* width: 100%; */
+  background-color: #203040;
+  color: #ffffff;
+  clear:both;
+  position:relative;
+  bottom:0;
+  width: 100%;
+  text-align: center;
 }
 
 
@@ -106,6 +122,13 @@ button.primary {
 
 }
 
+button.smallAdd {
+  border-radius: 0.2rem;
+  border: 0.1rem #a4a4a4 solid;
+  /* text-align: center; */
+
+}
+
 button.block {
   width : 100%;
 }
@@ -156,6 +179,7 @@ a.brand {
 .col-2 {
   flex: 2 1 50rem;
   width: 50%;
+  text-align: center;
   
 }
 
@@ -174,12 +198,17 @@ img {
 
 img.small{
   max-width: 20rem;
-  width: 450%;
+  width: 250%;
 
 }
 
+img.MoreSmall {
+  max-width: 15rem;
+  width: 250%;
+}
+
 img.medium {
-  max-width: 29rem;
+  max-width: 28.5rem;
   /* width: 300%;
   height: auto; */
   width: 300px;
@@ -189,7 +218,7 @@ img.medium {
 }
 
 img.large {
-  width: 50%;
+  width: 65%;
 }
 
 /* Card */
@@ -215,6 +244,7 @@ img.large {
 .price {
  font-size: 1.5rem;
  font: bold; 
+ text-align: justify;
 }
 
 /*Rating*/
@@ -256,3 +286,10 @@ p{
   background-color:white;
 }
 
+.img-container {
+  text-align: center;
+}
+
+h1{
+  font-size: 175%;
+}
