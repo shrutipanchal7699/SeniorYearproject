@@ -15,11 +15,11 @@ export default function Product(props){
                                 </Link>
                 <div className="card-body">
                                     <Link to={`/product/${product._id}`}>
-                                        <h2>{product.name}</h2>
+                                        <h2>{product.name} </h2>
                                     </Link>
-                                
+                                    {/* {product.location} */}
                                     <div className="price">
-                                       ${product.price} /pound.
+                                        <b>${product.price} /pound.</b>
                                     </div>
                 </div>
             </div>

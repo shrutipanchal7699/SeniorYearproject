@@ -37,11 +37,22 @@ export default function CartScreen(props){
 
     return (
         <div className="row top">
-            <div className="col-2"><h1>Shopping Cart</h1>
+            <br>
+            </br>
+            <p>
+                <br></br>
+            </p>
+            <br></br>
+            <div><Link to="/"> Go back to shopping</Link></div>
+            {/* <br></br> */}
+            <p></p>
+            <p></p>
+            {/* <div></div> */}
+            <div className="col-2"><h2>Shopping Cart</h2>
                 {itemsInCart.length === 0 ?                                        
-                    <MessageBox>
-                    {/* <div><img src="/images/appleImage.jpg"></img></div> */}
-                    <p> The cart is currently empty.<br></br>
+                    <MessageBox style="background-color: white">                     
+                    <div className = "img-container" alt=""><img src="/images/images.jpg" ></img></div>
+                    <p> Oopps!<br></br>The cart is currently empty.<br></br>
                     <br></br>
                     <Link to="/">Go back to shopping and choose the freshies!</Link>
                     </p>
@@ -80,10 +91,15 @@ export default function CartScreen(props){
                 )}
             </div>
             <div className="col-1">
+                <br></br>
+                <br></br>
                 <div className="card card-body">
                     <ul>
+                    <br>
+                    </br>
                         <li><h2>Subtotal ({itemsInCart.reduce((a,c) => a + c.quantity , 0)} items) :${itemsInCart.reduce((a,c) => a + (c.price * c.quantity), 0)}
                         </h2></li>
+                        <br></br>
                         <li><button type="button" onClick={checkoutHandler} className="primary block" disabled={itemsInCart.length === 0 }> Proceed to Checkout</button></li>
                     </ul>
 

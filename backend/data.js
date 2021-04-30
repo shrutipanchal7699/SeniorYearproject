@@ -1,72 +1,201 @@
 const data = {
+    // {product_id: [{_id:, location:,qty: }]}
     products:[
         {
             _id: '1',
+            // product_id: [
+            //     {_id: 1,
+            //     location: "San Jose",
+            //     qty: "5lbs"},
+            //     {_id: 2,
+            //         location: "San Francisco",
+            //         qty: "5lbs"},
+            //     {_id: 3,
+            //         location: "San Mateo",
+            //         qty: "5lbs"},
+
+            // ],
             name: 'Organic Apples',
             image: '/images/appleImage.jpg',
             price: 1.5,
             countInStock : 50,
-            description: 'freshly farmed organic apples',
+            location:'San Francisco',
+            description: 'Apples are a good source of fiber and vitamin C. They also contain polyphenols, which may have numerous health benefits, may aid weight loss in several ways. They’re also particularly filling due to their high fiber content may aid weight loss in several ways. They’re also particularly filling due to their high fiber content. Apples may aid weight loss in several ways. They’re also particularly filling due to their high fiber content. They’re high in soluble fiber, which helps lower cholesterol. They also have polyphenols, which are linked to lower blood pressure and stroke risk. ',
         },
 
         {
             _id: '2',
+            // product_id: [
+            //     {_id: 1,
+            //     location: "San Jose",
+            //     qty: "5lbs"},
+            //     {_id: 2,
+            //         location: "San Francisco",
+            //         qty: "5lbs"},
+            //     {_id: 3,
+            //         location: "San Mateo",
+            //         qty: "5lbs"},
+
+            // ],
             name: 'Bananas',
             image: '/images/bananaImage.jpg',
             price: 3,
             countInStock : 50,
+            location:'San Francisco',
             description: 'fresh from the farm bananas',
         },
 
         {
             _id: '3',
+            // product_id: [
+            //     {_id: 1,
+            //     location: "San Jose",
+            //     qty: "5lbs"},
+            //     {_id: 2,
+            //         location: "San Francisco",
+            //         qty: "5lbs"},
+            //     {_id: 3,
+            //         location: "San Mateo",
+            //         qty: "5lbs"},
+
+            // ],
             name: 'Blueberries',
             image: '/images/blueberryImage.jpg',
             price: 1,
             countInStock : 50,
+            location:'San Francisco',
             description: 'hand picked blueberries staright from the farms',
         },
 
         {
             _id: '4',
+            // product_id: [
+            //     {_id: 1,
+            //         location: "San Jose",
+            //         qty: "5lbs"},
+            //     {_id: 2,
+            //         location: "San Francisco",
+            //         qty: "5lbs"},
+            //     {_id: 3,
+            //         location: "San Mateo",                        qty: "5lbs"},
+
+            // ],
             name: 'Broccolis',
             image: '/images/broccoliImage.jpg',
             price: 2,
             countInStock : 50,
+            location:'San Francisco',
             description: 'Add some broccoli facts',
         },
+        
         {
             _id: '5',
+            // product_id: [
+            //     {_id: 1,
+            //         location: "San Jose",
+            //         qty: "5lbs"},
+            //         {_id: 2,
+            //             location: "San Francisco",
+            //             qty: "5lbs"},
+            //         {_id: 3,
+            //             location: "San Mateo",
+            //             qty: "5lbs"},
+
+            // ],
             name: 'cabbage',
             image: '/images/cabbageImage.jpg',
             price: 2,
             countInStock : 50,
+            location:'San Francisco',
             description: 'freshly farmed organic apples',
         },
         {
             _id: '6',
+            // product_id: [
+            //     {_id: 1,
+            //         location: "San Jose",
+            //         qty: "5lbs"},
+            //         {_id: 2,
+            //             location: "San Francisco",
+            //             qty: "5lbs"},
+            //         {_id: 3,
+            //             location: "San Mateo",
+            //             qty: "5lbs"},
+
+            // ],
             name: 'Orange Carrots',
             image: '/images/carrotImage.jpg',
             price: 2,
             countInStock : 50,
+            location:'San Francisco',
             description: 'freshly farmed organic apples',
         },
         {
             _id: '7',
+            // product_id: [
+            //     {_id: 1,
+            //         location: "San Jose",
+            //         qty: "5lbs"},
+            //         {_id: 2,
+            //             location: "San Francisco",
+            //             qty: "5lbs"},
+            //         {_id: 3,
+            //             location: "San Mateo",
+            //             qty: "5lbs"},
+
+            // ],
             name: 'Cocoa Beans',
             image: '/images/cocoabeanImage.jpg',
             price: 16,
             countInStock : 50,
+            location:'San Francisco',
             description: 'freshly farmed organic apples',
         },
         {
             _id: '8',
+            // product_id: [
+            //     {_id: 1,
+            //         location: "San Jose",
+            //         qty: "5lbs"},
+            //         {_id: 2,
+            //             location: "San Francisco",
+            //             qty: "5lbs"},
+            //         {_id: 3,
+            //             location: "San Mateo",
+            //             qty: "5lbs"},
+
+            // ],
             name: 'Sweet Corn Bushels',
             image: '/images/cornImage.jpg',
             price: 4,
             countInStock : 50,
+            location:'San Francisco',
             description: 'freshly farmed organic apples',
         },
+
+        {
+            _id: '9',
+            // product_id: [
+            //     {_id: 1,
+            //         location: "San Jose",
+            //         qty: "5lbs"},
+            //         {_id: 2,
+            //             location: "San Francisco",
+            //             qty: "5lbs"},
+            //         {_id: 3,
+            //             location: "San Mateo",
+            //             qty: "5lbs"},
+
+            // ],
+            name: 'Green Apples',
+            image: '/images/greenApple.jpg',
+            price: 3,
+            countInStock : 50,
+            location:'Alaska',
+            description: 'freshly farmed organic apples',
+        },
+
+        /*
         {
             _id: '9',
             name: 'lettuce',
@@ -75,54 +204,76 @@ const data = {
             countInStock : 50,
             description: 'freshly farmed organic apples',
         },
+        */
+
         {
             _id: '10',
-            name: 'Organic Oranges',
-            image: '/images/orangeImage.jpg',
-            price: 1,
+            name: 'Ilaichi Bananas',
+            image: '/images/ilaichiBanana.jpg',
+            price: 4,
             countInStock : 50,
-            description: 'freshly farmed organic apples',
+            location: 'Santa Clara',
+            description: 'freshly farmed organic Indian Bananas',
         },
+        
         {
             _id: '11',
             name: 'White Potatoes',
             image: '/images/potatoImage.jpg',
             price: 1,
             countInStock : 50,
+            location: 'San Jose',
             description: 'freshly farmed organic apples',
         },
+
         {
             _id: '12',
-            name: 'Rasberries',
-            image: '/images/rasberriesImage.jpg',
-            price: 8,
+            name: 'Blueberries',
+            image: '/images/blueBerries.jpg',
+            price: 1,
             countInStock : 50,
-            description: 'freshly farmed organic apples',
+            location: 'San Mateo',
+            description: '', 
         },
+        
         {
             _id: '13',
+            name: 'Raw Cocoa ',
+            image: '/images/rawCocoaBeans.jpg',
+            price: 8,
+            countInStock : 50,
+            location: 'San Jose',
+            description: ' ',
+        },
+        
+        {
+            _id: '14',
             name: 'Red Onions',
             image: '/images/redOnionImage.jpg',
             price: 1,
             countInStock : 50,
-            description: 'freshly farmed organic apples',
-        },
-        {
-            _id: '14',
-            name: 'Farmed Spring Onions',
-            image: '/images/springOnionImage.jpg',
-            price: 2,
-            countInStock : 50,
+            location: 'Austin',
             description: 'freshly farmed organic apples',
         },
         {
             _id: '15',
+            name: 'Farmed Spring Onions',
+            image: '/images/springOnionImage.jpg',
+            price: 2,
+            countInStock : 50,
+            location: 'Scottsdale',
+            description: 'freshly farmed organic apples',
+        },
+        {
+            _id: '16',
             name: 'Strawberries',
             image: '/images/strawberryImage.jpg',
             price: 3,
             countInStock : 50,
+            location: 'Hawai',
             description: 'freshly farmed organic apples',
         },
+        /*
         {
             _id: '16',
             name: 'Herbal Tea Leaves',
@@ -164,7 +315,7 @@ const data = {
             // countInStock : 50,
             description: 'freshly farmed organic apples',
         },
-        
+        */
     ],
 };
 export default data;
