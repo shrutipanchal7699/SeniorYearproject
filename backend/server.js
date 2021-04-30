@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import express from 'express';
 import data from './data.js'
 import mongoose from 'mongoose';
@@ -29,3 +30,15 @@ const port = process.env.PORT || 5000;
 app.listen(port, ()=>{
     console.log(`Server started at http://localhost:${port}`);
 });
+=======
+//author Param Patel
+//012421227
+const http = require('http');
+const app = require('./app');
+
+const port = process.env.PORT || 5000;
+
+const server = http.createServer(app);
+
+server.listen(port);
+>>>>>>> Stashed changes
