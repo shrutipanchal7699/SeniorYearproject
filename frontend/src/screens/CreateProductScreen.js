@@ -34,7 +34,7 @@ export default function CreateProductScreen(props){
             console.log("hello");
             dispatch(createProduct(productName, location, description, countInStock, price));
 
-             props.history.push(redirect);
+            //  props.history.push(redirect);
 
 
         //  }
