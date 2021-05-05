@@ -13,15 +13,6 @@ export const addToCart = (product_id, quantity) => async(dispatch, getState) =>{
             name: data.name,
             image: data.image,
             price: data.price,
-            // storage: data.product_id.map((value, index) => {
-            //     value = data.product_id[index]._id
-            //     index = data.product_id[index].location
-            // }),
-
-            // storageLocation: [...Array(data.product_id).keys()].map ((x) =>(
-            //     key = data.product_id._id
-            //     value = data.product_id.location
-            // ))),
             countInStock: data.countInStock,
             location: data.location,
             product: data._id,

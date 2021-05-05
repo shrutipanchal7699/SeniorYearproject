@@ -1,4 +1,4 @@
-import { PRODUCT_DETAILS_FAIL, PRODUCT_DETAILS_REQUEST, PRODUCT_DETAILS_SUCCESS, PRODUCT_LIST_FAIL, PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS } from "../constants/productConstants"
+import {PRODUCT_CREATE_FAIL, PRODUCT_CREATE_REQUEST, PRODUCT_CREATE_SUCCESS, PRODUCT_DETAILS_FAIL, PRODUCT_DETAILS_REQUEST, PRODUCT_DETAILS_SUCCESS, PRODUCT_LIST_FAIL, PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS } from "../constants/productConstants"
 import Axios from "axios";
 
 export const listProducts = () => async (dispatch) => {
@@ -45,3 +45,46 @@ export const detailsProduct = (product_id) => async(dispatch)=>{
         });
     }
 };
+
+// export const createProduct = (productName, location, description, countInStock, price, image) => async (dispatch) =>  {
+//      dispatch({type: PRODUCT_CREATE_REQUEST, payload: {productName, location, description, countInStock, price, image}});
+//     try{
+//         //console.log(localStorage.setItem("productInfo", JSON.stringify(data));     
+//         console.log(productName + " "+ location+ " "+ description + " "+ countInStock + " "+ price + " "+ image );
+//         const {data} = await Axios.post('http://localhost:5000/products/createProduct', {productName, location, description, countInStock, price});
+//         dispatch({type: PRODUCT_CREATE_SUCCESS, payload: data});
+
+//         localStorage.setItem("productInfo", JSON.stringify(data));
+           
+//     }
+//     catch(error){
+//         dispatch({ type: PRODUCT_CREATE_FAIL, 
+//             payload:
+//             error.response && error.response.data.message
+//                         ? error.response.data.message
+//                         : error.message,
+//          });
+//     }
+// };
+
+export const createProduct = (productName, location, description, countInStock, price, image) => async (dispatch) =>  {
+    dispatch({type: PRODUCT_CREATE_REQUEST, payload: {productName, location, description, countInStock, price}});
+   try{
+       //console.log(localStorage.setItem("productInfo", JSON.stringify(data));     
+       console.log(productName + " "+ location+ " "+ description + " "+ countInStock + " "+ price + " "+ image );
+       const {data} = await Axios.post('http://localhost:5000/products/createProduct', {"name" : productName,"location": location,"description": description,"quantity": countInStock,"price":price});
+       dispatch({type: PRODUCT_CREATE_SUCCESS, payload: data});
+
+       localStorage.setItem("productInfo", JSON.stringify(data));
+          
+   }
+   catch(error){
+       dispatch({ type: PRODUCT_CREATE_FAIL, 
+           payload:
+           error.response && error.response.data.message
+                       ? error.response.data.message
+                       : error.message,
+        });
+   }
+};
+

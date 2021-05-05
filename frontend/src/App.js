@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import { signout } from './actions/userActions';
 import CartScreen from './screens/CartScreen';
+import CreateProductScreen from './screens/CreateProductScreen';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import RegisterScreen from './screens/RegisterScreen';
@@ -54,6 +55,7 @@ function App() {
                      {/* highlights the number of items in the cart. */}
                       {itemsInCart.length > 0 && (<span className="badge">{itemsInCart.length}</span>)}
                     </Link>
+                    <Link class="flowleft" to="/createProduct"> Create Product</Link>
 
                 </div>
             </header>
@@ -63,6 +65,7 @@ function App() {
                 <Route path= "/signin" component= {SigninScreen}></Route>
                 <Route path= "/register" component= {RegisterScreen}></Route>
                 <Route path="/cart/:id?" component={CartScreen}></Route>
+                <Route path="/createProduct" component={CreateProductScreen}></Route>
                 
             </main>
             {/* <div className="footer">

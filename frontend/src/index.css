@@ -208,12 +208,12 @@ img.MoreSmall {
 }
 
 img.medium {
-  max-width: 28.5rem;
+  max-width: 34.4rem;
   /* width: 300%;
   height: auto; */
-  width: 300px;
+  width: 530px;
   /* aspect-ratio: auto 196 / 294; */
-  height: 200px;
+  height: 300px;
   
 }
 
@@ -228,7 +228,9 @@ img.large {
   border-radius: 0.5rem;
   margin: 1rem;
   height: auto;
-  width: 19.4%;
+  /* height: 65%; */
+  /* width: 19.4%; */
+  width: 23.0%;
 }
 
 .card-body {
