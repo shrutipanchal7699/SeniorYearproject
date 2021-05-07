@@ -34,15 +34,15 @@ function App() {
                     <Link>
                     {
                       userInfo ? (
-                      <div className = "dropdown">
+                      <div className="flowright">
                         <Link to = "#"> {userInfo.name} <i className= "fa fa-caret-down"></i> {' '}
                         </Link>
-                        <ul className= "dropdown-content">
-                          <Link to = "#signout" onClick = {signoutHandler}>
+                        <ul className="dropdown">
+                          <Link to = "#signout" onClick = {signoutHandler} >
                             Sign Out
                           </Link>
                         </ul>
-                        </div>
+                      </div>
                       ) :
                       (
                         <Link class="flowright" to="/signin">Sign In</Link>
