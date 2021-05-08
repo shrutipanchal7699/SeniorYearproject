@@ -5,7 +5,7 @@ import { addToCart, removeFromCart, checkout } from '../actions/cartActions';
 import MessageBox from '../components/MessageBox';
 import HomeScreen from './HomeScreen';
 
-export default function CartScreen(props){
+export default function TransactionScreen(props){
     const product_id = props.match.params.id;
 
     //returns the quantity of the particular product which is  selected.
@@ -28,7 +28,7 @@ export default function CartScreen(props){
         dispatch(checkout())
 
         // returning back to the HomeScreen.
-        props.history.push(`/transaction`);
+        props.history.push(`/`);
     }
 
     useEffect(() =>{
@@ -36,8 +36,6 @@ export default function CartScreen(props){
             dispatch(addToCart(product_id, quantity));
         }
     }, [dispatch, product_id, quantity]);
-
-
 
     return (
         <div className="row top">
@@ -52,10 +50,18 @@ export default function CartScreen(props){
             <p></p>
             <p></p>
             {/* <div></div> */}
-            <div className="col-2"><h2>Shopping Cart</h2>
-                {itemsInCart.length === 0 ?                                        
+            <div className="col-2"><br></br><h1><br></br>Transaction in process...</h1>
+            <img src="/images/thankyou.jpg" ></img>
+            {/* <MessageBox style="background-color: white">                      */}
+                    {/* <div className = "img-container" alt=""><img src="/images/thanyou.jpg" ></img></div> */}
+                    <p><br></br><b>See you soon!</b><br></br>
+                    <br></br>
+                    <Link to="/">Want to shop again!</Link>
+                    </p>
+            {/* </MessageBox> */}
+                {/* {itemsInCart.length === 0 ?                                        
                     <MessageBox style="background-color: white">                     
-                    <div className = "img-container" alt=""><img src="/images/images.jpg" ></img></div>
+                    <div className = "img-container" alt=""><img src="/images/thanyou.jpg" ></img></div>
                     <p> Oopps!<br></br>The cart is currently empty.<br></br>
                     <br></br>
                     <Link to="/">Go back to shopping and choose the freshies!</Link>
@@ -92,24 +98,9 @@ export default function CartScreen(props){
                         </div> 
                         </li>)}
                     </ul>
-                )}
+                )} */}
             </div>
-            <div className="col-1">
-                <br></br>
-                <br></br>
-                <div className="card card-body">
-                    <ul>
-                    <br>
-                    </br>
-                        <li><h2>Subtotal ({itemsInCart.reduce((a,c) => a + c.quantity , 0)} items) :${itemsInCart.reduce((a,c) => a + (c.price * c.quantity), 0)}
-                        </h2></li>
-                        <br></br>
-                        <li><button type="button" onClick={checkoutHandler} className="primary block" disabled={itemsInCart.length === 0 }> Proceed to Checkout</button></li>
-                    </ul>
-
-                </div>
-
-            </div>
+            
         </div>
     );
 }
