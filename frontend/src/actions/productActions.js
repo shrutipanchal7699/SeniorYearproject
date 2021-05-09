@@ -46,33 +46,24 @@ export const detailsProduct = (product_id) => async(dispatch)=>{
     }
 };
 
-// export const createProduct = (productName, location, description, countInStock, price, image) => async (dispatch) =>  {
-//      dispatch({type: PRODUCT_CREATE_REQUEST, payload: {productName, location, description, countInStock, price, image}});
-//     try{
-//         //console.log(localStorage.setItem("productInfo", JSON.stringify(data));     
-//         console.log(productName + " "+ location+ " "+ description + " "+ countInStock + " "+ price + " "+ image );
-//         const {data} = await Axios.post('http://localhost:5000/products/createProduct', {productName, location, description, countInStock, price});
-//         dispatch({type: PRODUCT_CREATE_SUCCESS, payload: data});
-
-//         localStorage.setItem("productInfo", JSON.stringify(data));
-           
-//     }
-//     catch(error){
-//         dispatch({ type: PRODUCT_CREATE_FAIL, 
-//             payload:
-//             error.response && error.response.data.message
-//                         ? error.response.data.message
-//                         : error.message,
-//          });
-//     }
-// };
-
 export const createProduct = (productName, location, description, countInStock, price, image) => async (dispatch) =>  {
     dispatch({type: PRODUCT_CREATE_REQUEST, payload: {productName, location, description, countInStock, price}});
    try{
        //console.log(localStorage.setItem("productInfo", JSON.stringify(data));     
        console.log(productName + " "+ location+ " "+ description + " "+ countInStock + " "+ price + " "+ image );
-       const {data} = await Axios.post('http://localhost:5000/products/createProduct', {"name" : productName,"location": location,"description": description,"quantity": countInStock,"price":price});
+       const currToken = localStorage.getItem("userToken");
+       const {data} = await Axios.post('http://localhost:5000/products/createProduct', 
+       {
+        "name" : productName,
+       "location": location,
+       "description": description,
+       "quantity": countInStock,
+       "price":price,
+      // "photos": photos,
+       
+   },{headers: {
+                'authorization' : 'bearer '.concat(currToken),
+            }});
        dispatch({type: PRODUCT_CREATE_SUCCESS, payload: data});
 
        localStorage.setItem("productInfo", JSON.stringify(data));
@@ -87,4 +78,3 @@ export const createProduct = (productName, location, description, countInStock, 
         });
    }
 };
-

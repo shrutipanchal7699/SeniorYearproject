@@ -106,16 +106,6 @@ export default function CreateProductScreen(props){
                     ></input>
                 </div>
 
-                {/* <div>
-                    <label for="img">Select image:</label>
-                    <input 
-                    type="text" 
-                    id="img" 
-                    name="img" 
-                    accept="image/*"
-                    onChange= { (e)=> setImage(e.target.value)}
-                    ></input>
-                </div> */}
 
                 <div>
                     <label htmlFor= "description"> Enter Image URL</label>

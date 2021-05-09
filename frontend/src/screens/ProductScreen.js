@@ -33,7 +33,6 @@ export default function ProductScreen(props) {
    //defining the addToCartHandler
    const addToCartHandler = () =>{
         props.history.push(`/cart/${product_id} ? quantity=${quantity}`);
-     //  props.history.push(`/cart/${product_id} ? location=${product_id}`);
        
    };
       
@@ -75,16 +74,6 @@ export default function ProductScreen(props) {
                             </li>
                             <li>
                                 <b>Location Origin: </b> {product.location}                               
-                            </li>
-                            <li>
-                            {/* <b>Locations: </b> */}
-                                <p>
-                                    {/* {product.product_id[0].location }  */}
-                                    <li>
-                                    {/* <button onClick ={addToCartHandler}className="primary block"> Add to Cart</button> */}
-                                    </li>
-                                </p>
-                                {/* <p>{product.product_id[1].location }</p> */}
                             </li>
                         </ul>
                     </div>

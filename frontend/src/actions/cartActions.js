@@ -22,21 +22,25 @@ export const addToCart = (product_id, quantity) => async(dispatch, getState) =>{
     
     // saving whatever is in the cart to the local Storage.
     localStorage.setItem('itemsInCart', JSON.stringify(getState().cart.itemsInCart));
-
-
 };
-// checkout
+
 export const checkout = () => async(dispatch, getState) =>{
     console.log(localStorage.getItem("itemsInCart"))
-    const {data} = await Axios.post(`/api/products/`,
+    const currToken = localStorage.getItem("userToken");
+    const {data} = await Axios.post(`/products/checkout`,
     {
-        "body": localStorage.getItem("itemsInCart")
-    });
+       all_products: JSON.parse(localStorage.getItem("itemsInCart")),
+         
+    },{headers: {
+                'authorization' : 'bearer '.concat(currToken) ,
+            }});
     localStorage.removeItem("itemsInCart");
 
     dispatch({type: CART_CHECKOUT, payload: localStorage.getItem("itemsInCart")});
     localStorage.setItem('itemsInCart',JSON.stringify(getState().cart.itemsInCart));
 }
+
+
 
 //adding removing from cart.
 export const removeFromCart = (product_id) => (dispatch, getState) =>{
