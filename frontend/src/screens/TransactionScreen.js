@@ -58,47 +58,7 @@ export default function TransactionScreen(props){
                     <br></br>
                     <Link to="/">Want to shop again!</Link>
                     </p>
-            {/* </MessageBox> */}
-                {/* {itemsInCart.length === 0 ?                                        
-                    <MessageBox style="background-color: white">                     
-                    <div className = "img-container" alt=""><img src="/images/thanyou.jpg" ></img></div>
-                    <p> Oopps!<br></br>The cart is currently empty.<br></br>
-                    <br></br>
-                    <Link to="/">Go back to shopping and choose the freshies!</Link>
-                    </p>
-                    </MessageBox>                    
-                    :(
-                    <ul>
-                        {itemsInCart.map((item) => 
-                        <li key = {item.product}> 
-                        <div className="row">
-                            <div>
-                                <img src={item.image} alt = {item.name} className="small"></img>
-                            </div>
-                            <div className="min-30"><Link to={`/product/${item.product}`}>{item.name}</Link></div>
-                            <div><select value={item.quantity} 
-                            onChange={(e) =>{
-                                dispatch( 
-                                    addToCart(item.product, Number(e.target.value)))
-                            }}>
-                              {
-                                // returning an array from 0 to that number in stock
-                                [...Array(item.countInStock).keys()].map( (x) =>(
-                                    <option key={x+1} value={ x + 1}>{x + 1}</option>
-                                ))
-                              }  
-                            </select>
-                            </div>
-                            <div>
-                                ${item.price}
-                            </div>
-                            <div>
-                                <button type="button" onClick = {() => removeFromCartHandler(item.product)}>Delete Items</button>
-                            </div>
-                        </div> 
-                        </li>)}
-                    </ul>
-                )} */}
+            
             </div>
             
         </div>

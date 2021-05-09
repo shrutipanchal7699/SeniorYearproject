@@ -27,6 +27,7 @@ export default function CreateProductScreen(props){
         e.preventDefault();
         console.log(productName + " " + location + " "+ description + " "+ countInStock+" "+ price + " "+image  );
          dispatch(createProduct(productName, location, description, countInStock, price, image));
+         props.history.push(`/`);
     }
 
     useEffect(() => {
@@ -34,11 +35,7 @@ export default function CreateProductScreen(props){
             console.log("hello");
             dispatch(createProduct(productName, location, description, countInStock, price));
 
-            //  props.history.push(redirect);
-
-
-        //  }
-    },
+     },
     []);
     
 
@@ -48,10 +45,6 @@ export default function CreateProductScreen(props){
                 <div>
                     <h1> Create and Add a New Product</h1>
                 </div>
-                {/* {loading && <LoadingBox></LoadingBox>}
-                {error && <MessageBox variant= "danger">{error}</MessageBox> }
-                 */}
-                {/* Entering the name of the product */}
                 <div>
                     <label htmlFor= "productName"> Product Name</label>
                     <input 
@@ -113,15 +106,26 @@ export default function CreateProductScreen(props){
                     ></input>
                 </div>
 
-                <div>
+                {/* <div>
                     <label for="img">Select image:</label>
                     <input 
-                    type="file" 
+                    type="text" 
                     id="img" 
                     name="img" 
                     accept="image/*"
                     onChange= { (e)=> setImage(e.target.value)}
                     ></input>
+                </div> */}
+
+                <div>
+                    <label htmlFor= "description"> Enter Image URL</label>
+                        <input 
+                        type= "text" 
+                        id= "img" 
+                        placeholder= "Enter Image URL " 
+                        required
+                        onChange= { (e)=> setImage(e.target.value)}
+                        ></input>
                 </div>
               
 
